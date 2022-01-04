@@ -1,5 +1,5 @@
 import ReactStars from "react-rating-stars-component";
-
+import {Link} from "react-router-dom";
 const MovieCard = ({ filtreMovie }) => {
   return (
     <div
@@ -13,7 +13,9 @@ const MovieCard = ({ filtreMovie }) => {
       {filtreMovie.map((movie) => {
         return (
           <div key={movie.id}>
+            <Link to={`/about/${movie.id}`}>
             <img src={movie.img} width={233} height={338} />
+            </Link>
             <h3
               style={{
                 color: "#fff",
